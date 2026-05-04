@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global terminal aesthetic base styles */
+@layer base {
+  body {
+    @apply bg-terminal-bg text-terminal-base font-mono antialiased;
+  }
+
+  /* Subtle CRT scanline overlay via repeating gradient */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.05) 2px,
+      rgba(0, 0, 0, 0.05) 4px
+    );
+    z-index: 9999;
+  }
+
+  ::selection {
+    @apply bg-terminal-base text-terminal-bg;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: #166534 #0d0d0d;
+}
