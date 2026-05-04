@@ -1,19 +1,16 @@
 name: Deploy to GitHub Pages
 
-# Triggers on every push to main and allows manual dispatch
 on:
   push:
     branches:
       - main
   workflow_dispatch:
 
-# Required permissions for GitHub Pages deployment
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Only allow one concurrent deployment; cancel in-progress runs
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -35,9 +32,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Type-check
+        run: npx tsc --noEmit
+
       - name: Build site
-        run: npm run build
-        # Vite outputs to dist/ — this is what gets deployed
+        run: npx vite build
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
