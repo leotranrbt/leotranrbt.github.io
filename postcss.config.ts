@@ -1,6 +1,2 @@
-import tailwindcss from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
-
-export default {
-  plugins: [tailwindcss, autoprefixer],
-};
+// This file is intentionally left blank.
+// PostCSS config is in postcss.config.cjs (required for "type":"module" + Vite compatibility).
