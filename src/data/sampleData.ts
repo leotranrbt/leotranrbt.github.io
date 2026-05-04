@@ -1,21 +1,28 @@
 import type { Skill, Project, ContactLink } from '../types';
 
 /**
- * Sample skills data.
- * Replace with your actual skills before deployment.
+ * Skills data — grouped by category.
+ * Categories map to section headers on the Home page:
+ *   language | framework | tool | platform
  */
 export const SKILLS: Skill[] = [
-  { name: 'TypeScript', category: 'language' },
-  { name: 'Python',     category: 'language' },
-  { name: 'Go',         category: 'language' },
-  { name: 'React',      category: 'framework' },
-  { name: 'Node.js',    category: 'framework' },
-  { name: 'FastAPI',    category: 'framework' },
-  { name: 'Docker',     category: 'tool' },
-  { name: 'Git',        category: 'tool' },
-  { name: 'PostgreSQL', category: 'tool' },
-  { name: 'AWS',        category: 'platform' },
-  { name: 'GitHub Actions', category: 'platform' },
+  // Languages
+  { name: 'C#',            category: 'language' },
+  { name: 'JavaScript',    category: 'language' },
+  { name: 'Python',        category: 'language' },
+
+  // Frameworks & tech stack
+  { name: '.NET',          category: 'framework' },
+  { name: 'MS SQL',        category: 'framework' },
+  { name: 'SSIS',          category: 'framework' },
+  { name: 'ReactJS',       category: 'framework' },
+
+  // Tools
+  { name: 'Git',           category: 'tool' },
+  { name: 'Scrum',         category: 'tool' },
+
+  // Platforms
+  { name: 'AWS',           category: 'platform' },
 ];
 
 /**
@@ -51,7 +58,7 @@ export const PROJECTS: Project[] = [
 ];
 
 /**
- * Sample contact links.
+ * Contact links.
  * Replace handles and URLs with your actual profiles.
  */
 export const CONTACT_LINKS: ContactLink[] = [
