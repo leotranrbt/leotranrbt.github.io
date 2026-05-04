@@ -31,3 +31,53 @@
   scrollbar-width: thin;
   scrollbar-color: #166534 #0d0d0d;
 }
+
+/* Markdown prose styles for blog posts — terminal theme */
+@layer components {
+  .prose-terminal h1,
+  .prose-terminal h2,
+  .prose-terminal h3,
+  .prose-terminal h4 {
+    @apply text-terminal-bright tracking-widest mt-6 mb-3;
+  }
+
+  .prose-terminal h1 { @apply text-2xl; }
+  .prose-terminal h2 { @apply text-xl; }
+  .prose-terminal h3 { @apply text-lg; }
+
+  .prose-terminal p {
+    @apply text-terminal-base leading-relaxed mb-4 text-sm;
+  }
+
+  .prose-terminal a {
+    @apply text-terminal-amber hover:text-terminal-bright underline transition-colors;
+  }
+
+  .prose-terminal code {
+    @apply bg-terminal-bg text-terminal-bright px-1.5 py-0.5 text-xs border border-terminal-border;
+  }
+
+  .prose-terminal pre {
+    @apply bg-terminal-bg border border-terminal-border p-4 overflow-x-auto mb-4;
+  }
+
+  .prose-terminal pre code {
+    @apply border-0 p-0 bg-transparent;
+  }
+
+  .prose-terminal ul,
+  .prose-terminal ol {
+    @apply text-terminal-base text-sm leading-relaxed mb-4 pl-6 space-y-1;
+  }
+
+  .prose-terminal ul { @apply list-disc; }
+  .prose-terminal ol { @apply list-decimal; }
+
+  .prose-terminal blockquote {
+    @apply border-l-2 border-terminal-dim pl-4 text-terminal-dim italic mb-4;
+  }
+
+  .prose-terminal hr {
+    @apply border-terminal-border my-6;
+  }
+}

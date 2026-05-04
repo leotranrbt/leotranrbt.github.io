@@ -1,17 +1,10 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
-
-/**
- * Placeholder page component used during scaffolding phases.
- * Will be replaced by real page components in Phase 3.
- */
-const PlaceholderPage = ({ name }: { name: string }): JSX.Element => (
-  <div className="flex items-center justify-center min-h-[60vh]">
-    <p className="text-xl text-terminal-dim tracking-widest">
-      &gt; [{name.toUpperCase()} PAGE — COMING IN PHASE 3]<span className="animate-blink">_</span>
-    </p>
-  </div>
-);
+import Home     from './pages/Home';
+import Projects from './pages/Projects';
+import Blog     from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import Contact  from './pages/Contact';
 
 /**
  * Root application component.
@@ -23,11 +16,11 @@ const App = (): JSX.Element => (
   <HashRouter>
     <Layout>
       <Routes>
-        <Route path="/"           element={<PlaceholderPage name="Home" />} />
-        <Route path="/projects"   element={<PlaceholderPage name="Projects" />} />
-        <Route path="/blog"       element={<PlaceholderPage name="Blog" />} />
-        <Route path="/blog/:slug" element={<PlaceholderPage name="Blog Post" />} />
-        <Route path="/contact"    element={<PlaceholderPage name="Contact" />} />
+        <Route path="/"           element={<Home />} />
+        <Route path="/projects"   element={<Projects />} />
+        <Route path="/blog"       element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/contact"    element={<Contact />} />
       </Routes>
     </Layout>
   </HashRouter>
