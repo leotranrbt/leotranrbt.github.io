@@ -16,7 +16,7 @@ const config: Config = {
           bg:      '#0d0d0d',
           surface: '#141414',
           border:  '#1a3a1a',
-          dim:     '#166534',
+          dim:     '#b6b6b6',
           base:    '#4ade80',
           bright:  '#86efac',
           amber:   '#fbbf24',
