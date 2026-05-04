@@ -7,22 +7,23 @@ import type { Skill, Project, ContactLink } from '../types';
  */
 export const SKILLS: Skill[] = [
   // Languages
-  { name: 'C#',            category: 'language' },
-  { name: 'JavaScript',    category: 'language' },
-  { name: 'Python',        category: 'language' },
+  { name: 'C#',          category: 'language' },
+  { name: 'JavaScript',  category: 'language' },
+  { name: 'Python',      category: 'language' },
+  { name: 'PowerShell',  category: 'language' },
 
-  // Frameworks & tech stack
-  { name: '.NET',          category: 'framework' },
-  { name: 'MS SQL',        category: 'framework' },
-  { name: 'SSIS',          category: 'framework' },
-  { name: 'ReactJS',       category: 'framework' },
+  // Frameworks
+  { name: '.NET',        category: 'framework' },
+  { name: 'ReactJS',     category: 'framework' },
 
   // Tools
-  { name: 'Git',           category: 'tool' },
-  { name: 'Scrum',         category: 'tool' },
+  { name: 'MS SQL',      category: 'tool' },
+  { name: 'SSIS',        category: 'tool' },
+  { name: 'Git',         category: 'tool' },
+  { name: 'Scrum',       category: 'tool' },
 
   // Platforms
-  { name: 'AWS',           category: 'platform' },
+  { name: 'AWS',         category: 'platform' },
 ];
 
 /**
@@ -62,7 +63,7 @@ export const PROJECTS: Project[] = [
  * Replace handles and URLs with your actual profiles.
  */
 export const CONTACT_LINKS: ContactLink[] = [
-  { platform: 'GitHub',   url: 'https://github.com/<YOUR_USERNAME>',     handle: '@<YOUR_USERNAME>', icon: '⌥' },
-  { platform: 'LinkedIn', url: 'https://linkedin.com/in/<YOUR_HANDLE>',   handle: '<YOUR_HANDLE>',    icon: '▣' },
-  { platform: 'Email',    url: 'mailto:<YOUR_EMAIL>',                     handle: '<YOUR_EMAIL>',     icon: '✉' },
+  { platform: 'GitHub',   url: 'https://github.com/<YOUR_USERNAME>',    handle: '@<YOUR_USERNAME>', icon: '⌥' },
+  { platform: 'LinkedIn', url: 'https://linkedin.com/in/<YOUR_HANDLE>', handle: '<YOUR_HANDLE>',    icon: '▣' },
+  { platform: 'Email',    url: 'mailto:<YOUR_EMAIL>',                   handle: '<YOUR_EMAIL>',     icon: '✉' },
 ];
